@@ -211,7 +211,7 @@ a {
 }
 
 .experience-card {
-  border-top: 4px solid var(--color-red);
+  border-top: 5px solid var(--color-red);
 }
 
 @media (max-width: 768px) {
@@ -309,7 +309,10 @@ a {
 
 .philosophy-grid article {
   padding: 25px;
-  border-top: 2px solid var(--color-red);
+  border-radius: 8px;
+  border: 1px solid #f3f0ed;
+  border-top: 4px solid var(--color-red);
+  /* border-left: 1px solid #e8e4e0; */
 }
 
 .philosophy-grid article span {
@@ -336,9 +339,92 @@ a {
   line-height: 1.7;
 }
 
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.gallery-card {
+  overflow: hidden;
+  background: var(--color-white);
+  border: 1px solid #e8e4e0;
+  border-radius: 8px;
+}
+
+.gallery-image {
+  display: grid;
+  min-height: 220px;
+  aspect-ratio: 4 / 3;
+  place-items: center;
+  padding: 20px;
+  background-color: var(--color-ivory);
+}
+
+.gallery-image--training {
+  background: linear-gradient(135deg, #f5f1ed 15%, #e8d8ca 100%);
+}
+
+.gallery-image--competition {
+  background: linear-gradient(135deg, #e8e4e0 15%, #d8b8b2 100%);
+}
+
+.gallery-image--team {
+  background: linear-gradient(135deg, #f5f1ed 15%, #d9dfd7 100%);
+}
+
+.gallery-image--coaching {
+  background: linear-gradient(135deg, #e8e4e0 15%, #cbd4df 100%);
+}
+
+.gallery-image--achievement {
+  background: linear-gradient(135deg, #f5f1ed 15%, #eadab7 100%);
+}
+
+.gallery-image--community {
+  background: linear-gradient(135deg, #e8e4e0 15%, #d8cde0 100%);
+}
+
+.image-placeholder-label {
+  padding: 9px 13px;
+  border: 1px solid rgb(32 33 36 / 15%);
+  border-radius: 4px;
+  background: rgb(255 255 255 / 75%);
+  color: #666;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.gallery-card-content {
+  padding: 20px 22px 22px;
+}
+
+.gallery-card-content h3 {
+  margin: 0 0 8px;
+  font-size: 1.1rem;
+}
+
+.gallery-card-content p {
+  margin: 0;
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
 @media (max-width: 768px) {
   .achievements-grid,
-  .philosophy-grid {
+  .philosophy-grid,
+  .gallery-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
