@@ -111,8 +111,7 @@ contactForm.addEventListener('submit', async (event) => {
       body: formData,
     });
 
-    contactFormStatus.textContent =
-      'Your message was sent to Google Forms, but this page cannot confirm whether it was recorded.';
+    contactFormStatus.textContent = 'Your message was sent.';
   } catch {
     fields.forEach((field, index) => {
       field.value = submittedValues[index];
